@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* [تحديث الألوان #10]: لوحة ألوان بنفسجي باستيل هادئة ورومانسية (Lavender / Lilac) */
+@theme {
+  --color-violet-50: #FAF6FD;
+  --color-violet-100: #F2EAF9;
+  --color-violet-200: #E4D5F2;
+  --color-violet-300: #D1B9E8;
+  --color-violet-400: #B998D8;
+  --color-violet-500: #A17EC5;
+  --color-violet-600: #8D68B2;
+  --color-violet-700: #78559C;
+  --color-violet-800: #5D427B;
+  --color-violet-900: #46315D;
+  --color-violet-950: #291B38;
+
+  --color-purple-400: #C8A6DC;
+  --color-purple-500: #B18AC9;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Tajawal', system-ui, -apple-system, sans-serif;
+    --font-display: 'Amiri', Georgia, serif;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    transition: background-color 200ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.pt-safe {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

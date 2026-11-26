@@ -1,0 +1,6 @@
+{
+  "name": "يومياتي",
+  "description": "تطبيق يومياتي الشخصي لتنظيم المهام اليومية والملاحظات السريعة مع حفظ محلي ودعم العمل دون إنترنت.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
